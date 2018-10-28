@@ -121,7 +121,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 10849973}
-  m_Layer: 0
+  - component: {fileID: 10849974}
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,6 +147,37 @@ Transform:
   m_Father: {fileID: 1848857199}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &10849974
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 10849972}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.57270527, y: 0.62160563}
+      - {x: -0.57266235, y: 0.17606759}
+      - {x: 0.09741497, y: -0.16472411}
+      - {x: 0.95595264, y: -0.2874465}
+      - {x: 4.457102, y: -0.23237848}
+      - {x: 5.0285587, y: 0.15416789}
+      - {x: 5.0827103, y: 0.61582303}
 --- !u!1 &11480618
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30686081}
   - component: {fileID: 30686080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55468610}
   - component: {fileID: 55468609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 86697351}
   - component: {fileID: 86697350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,7 +813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 477557540}
   - component: {fileID: 477557539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +962,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 613784377}
-  m_Layer: 0
+  - component: {fileID: 613784378}
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -955,6 +988,31 @@ Transform:
   m_Father: {fileID: 625491517}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &613784378
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 613784376}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.08964062, y: 0.32273817}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.050535, y: 1.2689481}
+  m_EdgeRadius: 0
 --- !u!1 &616608353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,7 +1265,8 @@ GameObject:
   m_Component:
   - component: {fileID: 763189426}
   - component: {fileID: 763189425}
-  m_Layer: 0
+  - component: {fileID: 763189427}
+  m_Layer: 8
   m_Name: Crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,6 +1332,31 @@ Transform:
   m_Father: {fileID: 2004286778}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &763189427
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 763189424}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.06, y: 1.06}
+    newSize: {x: 1.06, y: 1.06}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.06, y: 1.06}
+  m_EdgeRadius: 0
 --- !u!1 &778894767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,7 +1365,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 778894768}
-  m_Layer: 0
+  - component: {fileID: 778894769}
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,6 +1388,37 @@ Transform:
   m_Father: {fileID: 648609306}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &778894769
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 778894767}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.82463646, y: 0.725121}
+      - {x: -0.7812805, y: 0.31710148}
+      - {x: -0.3533306, y: 0.15305948}
+      - {x: 0.25631523, y: -0.18649673}
+      - {x: 1.0540314, y: -0.02930665}
+      - {x: 1.6457062, y: 0.31017935}
+      - {x: 1.6867638, y: 0.76175916}
 --- !u!1 &828507462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 828507464}
   - component: {fileID: 828507463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1447,8 +1563,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 830919290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.749, y: 3.485, z: 0}
-  m_LocalScale: {x: 2.740524, y: 2.740524, z: 2.740524}
+  m_LocalPosition: {x: 11, y: -0, z: 0}
+  m_LocalScale: {x: 3.4651186, y: 3.4651186, z: 3.4651186}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1788,11 +1904,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4248574718690034, guid: d213cd94ca8e2f64ea25fa8dc1e20c53, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.38
+      value: -6.1899996
       objectReference: {fileID: 0}
     - target: {fileID: 4248574718690034, guid: d213cd94ca8e2f64ea25fa8dc1e20c53, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.43
+      value: -3.2868996
       objectReference: {fileID: 0}
     - target: {fileID: 4248574718690034, guid: d213cd94ca8e2f64ea25fa8dc1e20c53, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1818,6 +1934,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114060653889167838, guid: d213cd94ca8e2f64ea25fa8dc1e20c53,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1430317850}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d213cd94ca8e2f64ea25fa8dc1e20c53, type: 2}
   m_IsPrefabAsset: 0
@@ -1904,7 +2025,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1123389862}
-  m_Layer: 0
+  - component: {fileID: 1123389863}
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1927,6 +2049,36 @@ Transform:
   m_Father: {fileID: 2004286778}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1123389863
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123389861}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.8051987, y: 0.69448304}
+      - {x: -2.7656422, y: 0.2812426}
+      - {x: -1.7635632, y: -0.2257576}
+      - {x: 2.7264023, y: -0.20724154}
+      - {x: 3.5111809, y: 0.2727058}
+      - {x: 3.5710945, y: 0.68859863}
 --- !u!1 &1124822804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,7 +2339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1185629124}
   - component: {fileID: 1185629123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2262,7 +2414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1232052839}
   - component: {fileID: 1232052838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2412,7 +2564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1291162460}
   - component: {fileID: 1291162459}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2478,6 +2630,11 @@ Transform:
   m_Father: {fileID: 10849973}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1430317850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1235198938277718, guid: 88c59dc4ec35fb84f933918011a7ff55,
+    type: 2}
+  m_PrefabInternal: {fileID: 2080192337}
 --- !u!1 &1460655654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,7 +2794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1536537280}
   - component: {fileID: 1536537279}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2873,7 +3030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1561443638}
   - component: {fileID: 1561443637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3136,7 +3293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1659454148}
   - component: {fileID: 1659454147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3623,7 +3780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1922619928}
   - component: {fileID: 1922619927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3698,7 +3855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1946610550}
   - component: {fileID: 1946610549}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3910,6 +4067,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 212828880424804878, guid: 88c59dc4ec35fb84f933918011a7ff55,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88c59dc4ec35fb84f933918011a7ff55, type: 2}
   m_IsPrefabAsset: 0
@@ -3997,7 +4159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2144450908}
   - component: {fileID: 2144450907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
