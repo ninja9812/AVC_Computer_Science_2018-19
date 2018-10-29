@@ -10,12 +10,12 @@ public class CameraController : MonoBehaviour {
     [SerializeField] GameObject target;
 
     /* Cached components */
-    SpriteRenderer playerSprite;
+    SpriteRenderer targetSprite;
 
     /* Use this for initialization */
     void Start()
     {
-        playerSprite = target.GetComponent<SpriteRenderer>();
+        targetSprite = target.GetComponent<SpriteRenderer>();
     }
 
     /* Update is called once per frame */
@@ -23,7 +23,7 @@ public class CameraController : MonoBehaviour {
     {
         var targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
 
-        if (!playerSprite.flipX)
+        if (!targetSprite.flipX)
         {
             targetPosition = new Vector3(targetPosition.x + lookAhead, targetPosition.y, targetPosition.z);
         }
