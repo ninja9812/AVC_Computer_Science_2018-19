@@ -5,17 +5,16 @@ using UnityEngine;
 public class SkeletonEnemy : EnemyController
 {
 
-    /* State */
+    /* State variables */
     bool isWaiting = true;
 
     /* Cached components */
-    Animator myAnimator;
+    Rigidbody2D myBody;
 
-	/* Use this for initialization */
+    /* Use this for initialization */
 	void Start ()
     {
-        myAnimator = GetComponent<Animator>();
-        mySprite = GetComponent<SpriteRenderer>();
+        myBody = GetComponent<Rigidbody2D>();
 	}
 
 	/* Update is called once per frame */
@@ -29,6 +28,7 @@ public class SkeletonEnemy : EnemyController
             {
                 myAnimator.Play("Drop");
                 isWaiting = true;
+                myBody.velocity = new Vector2(0, myBody.velocity.y);
             }
             // activate after finishing rise animation
             else if (!myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Rise"))
@@ -63,6 +63,6 @@ public class SkeletonEnemy : EnemyController
             mySprite.flipX = true;
         }
 
-        transform.position = new Vector2(transform.position.x + deltaX, transform.position.y);
+        myBody.velocity = new Vector2(deltaX, myBody.velocity.y);
     }
 }

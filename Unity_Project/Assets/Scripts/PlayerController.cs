@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int health = 500;
     [SerializeField] int invincibilityTime = 1;
 
-    /* State */
+    /* State variables */
     bool isGrounded = true;
     bool isMoving = false;
     float invincibilityCounter = -1;
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // check if player is hit by an enemy and not invincible
-        if (myCollider2D.IsTouchingLayers(LayerMask.GetMask("Damage")) && invincibilityCounter < 0)
+        if (myCollider2D.IsTouchingLayers(LayerMask.GetMask("Player Damage")) && invincibilityCounter < 0)
         {
             health -= 50;
             invincibilityCounter = invincibilityTime;
@@ -111,8 +111,8 @@ public class PlayerController : MonoBehaviour
             isMoving = false;
         }
 
+        // move using velocity (smoother than transform)
         myBody.velocity = new Vector2(deltaX, myBody.velocity.y);
-        // transform.position = new Vector2(transform.position.x + deltaX, transform.position.y);
     }
 
     /* Implement player jump using velocity */
@@ -150,6 +150,6 @@ public class PlayerController : MonoBehaviour
     /* Implement death */
     private void Die()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

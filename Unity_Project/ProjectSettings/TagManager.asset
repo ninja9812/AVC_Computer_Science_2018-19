@@ -16,11 +16,11 @@ TagManager:
   - 
   - 
   - Ground
-  - Actors
-  - Damage
+  - Player
+  - Enemies
+  - Player Damage
+  - Enemy Damage
   - Kill Zone
-  - 
-  - 
   - 
   - 
   - 
