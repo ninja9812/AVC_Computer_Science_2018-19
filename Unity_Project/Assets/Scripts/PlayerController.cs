@@ -8,10 +8,13 @@ public class PlayerController : MonoBehaviour
     /* Config parameters */
     [SerializeField] float moveSpeed = 10;
     [SerializeField] float jumpStrength = 5;
+    [SerializeField] int health = 500;
+    [SerializeField] int invincibilityTime = 1;
 
     /* State */
     bool isGrounded = true;
     bool isMoving = false;
+    float invincibilityCounter = -1;
 
     /* Cached components */
     Animator myAnimator;
@@ -31,15 +34,8 @@ public class PlayerController : MonoBehaviour
     /* Update is called once per frame */
     void Update ()
     {
-        // check if player is on ground
-        if (myCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground")))
-        {
-            isGrounded = true;
-        }
-        else
-        {
-            isGrounded = false;
-        }
+        // handle collisions
+        HandleCollisions();
 
         // check if player is moving
         Move();
@@ -52,6 +48,45 @@ public class PlayerController : MonoBehaviour
 
         // animate the player
         Animate();
+
+        // update invincibilityCounter
+        if (invincibilityCounter >= 0)
+        {
+            invincibilityCounter -= Time.deltaTime;
+        }
+
+        // check if player has died
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    /* Implement collision handling */
+    private void HandleCollisions()
+    {
+        // check if player is on ground
+        if (myCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+
+        // check if player is hit by an enemy and not invincible
+        if (myCollider2D.IsTouchingLayers(LayerMask.GetMask("Damage")) && invincibilityCounter < 0)
+        {
+            health -= 50;
+            invincibilityCounter = invincibilityTime;
+        }
+
+        // check if player fell into kill zone
+        if (myCollider2D.IsTouchingLayers(LayerMask.GetMask("Kill Zone")))
+        {
+            health = 0;
+        }
     }
 
     /* Implement player movement using Input class */
@@ -110,5 +145,11 @@ public class PlayerController : MonoBehaviour
         {
             myAnimator.Play("Hero-Jump");
         }
+    }
+
+    /* Implement death */
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 }

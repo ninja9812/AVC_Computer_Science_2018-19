@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Kill Zone
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - 
   - Ground
   - Actors
-  - 
-  - 
+  - Damage
+  - Kill Zone
   - 
   - 
   - 
@@ -41,6 +42,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 3070923067
+    locked: 0
+  - name: Midground
+    uniqueID: 2602222847
     locked: 0
   - name: Default
     uniqueID: 0

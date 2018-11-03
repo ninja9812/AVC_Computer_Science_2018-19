@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95755523316891906}
   - component: {fileID: 212828880424804878}
   - component: {fileID: 70728228064328054}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -110,6 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   jumpStrength: 6
+  health: 500
+  invincibilityTime: 1
+  invincibilityCounter: -1
 --- !u!212 &212828880424804878
 SpriteRenderer:
   m_ObjectHideFlags: 1
