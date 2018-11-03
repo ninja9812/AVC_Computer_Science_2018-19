@@ -24,12 +24,17 @@ public class SkeletonEnemy : EnemyController
         // skeleton is active
         if (!isWaiting)
         {
-            MoveTowardsPlayer();
-            myAnimator.Play("Walk");
+            // deactivate skeleton
             if (Mathf.Abs(GetDistanceFromPlayer()) > aggroDistance)
             {
                 myAnimator.Play("Drop");
                 isWaiting = true;
+            }
+            // activate after finishing rise animation
+            else if (!myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Rise"))
+            {
+                MoveTowardsPlayer();
+                myAnimator.Play("Walk");
             }
         }
         // skeleton is inactive and waiting

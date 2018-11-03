@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour
     /* Get distance between enemy and camera */
     protected float GetDistanceFromPlayer()
     {
-        return player.transform.position.x - transform.position.x;
+        var playerPosition = player.transform.TransformPoint(Vector3.zero);
+        var myPosition = transform.TransformPoint(Vector3.zero);
+        return playerPosition.x - myPosition.x;
     }
 }
