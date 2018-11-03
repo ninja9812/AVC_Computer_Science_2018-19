@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4177192202152490}
   - component: {fileID: 70692077128347586}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,10 +37,10 @@ GameObject:
   - component: {fileID: 4793615991019898}
   - component: {fileID: 212553680578521080}
   - component: {fileID: 95892310417795000}
-  - component: {fileID: 114926028335642594}
   - component: {fileID: 50375806581081392}
   - component: {fileID: 61838878262290244}
-  m_Layer: 9
+  - component: {fileID: 114926028335642594}
+  m_Layer: 10
   m_Name: Skeleton-Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  moveSpeed: 0.05
+  moveSpeed: 2
   aggroDistance: 10
   player: {fileID: 0}
 --- !u!212 &212553680578521080

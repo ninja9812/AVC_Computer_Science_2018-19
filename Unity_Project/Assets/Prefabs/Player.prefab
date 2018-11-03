@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4248327198664812}
   - component: {fileID: 50018299190499550}
-  - component: {fileID: 114955855010485408}
   - component: {fileID: 95755523316891906}
   - component: {fileID: 212828880424804878}
   - component: {fileID: 70728228064328054}
+  - component: {fileID: 114955855010485408}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -112,7 +112,6 @@ MonoBehaviour:
   jumpStrength: 6
   health: 500
   invincibilityTime: 1
-  invincibilityCounter: -1
 --- !u!212 &212828880424804878
 SpriteRenderer:
   m_ObjectHideFlags: 1
