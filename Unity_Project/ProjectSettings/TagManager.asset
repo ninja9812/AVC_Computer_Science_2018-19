@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Kill Zone
   layers:
   - Default
   - TransparentFX
@@ -13,12 +15,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemies
+  - Player Damage
+  - Enemy Damage
+  - Kill Zone
   - 
   - 
   - 
@@ -41,6 +43,15 @@ TagManager:
   - name: Background
     uniqueID: 3070923067
     locked: 0
+  - name: Midground
+    uniqueID: 2602222847
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemies
+    uniqueID: 1588729797
+    locked: 0
+  - name: Player
+    uniqueID: 2374814387
     locked: 0
