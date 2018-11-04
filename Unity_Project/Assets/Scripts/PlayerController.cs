@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         mySprite = GetComponent<SpriteRenderer>();
         myBody = GetComponent<Rigidbody2D>();
-        myCollider2D = GetComponent<CapsuleCollider2D>();
+        myCollider2D = GetComponent<Collider2D>();
     }
 
     /* Update is called once per frame */
@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /* Implement player jump using velocity */
-    public void Jump()
+    private void Jump()
     {
         // player can only jump if currently on the ground
         if (isGrounded)
