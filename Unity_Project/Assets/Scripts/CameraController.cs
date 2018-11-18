@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour {
     /* Update is called once per frame */
     void Update ()
     {
-        var targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
+        var targetPosition = new Vector3(target.transform.position.x, target.transform.position.y + 3, transform.position.z);
 
         if (!targetSprite.flipX)
         {

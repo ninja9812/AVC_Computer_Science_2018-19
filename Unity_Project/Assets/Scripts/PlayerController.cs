@@ -10,17 +10,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpStrength = 5;
     [SerializeField] int health = 500;
     [SerializeField] int invincibilityTime = 1;
+    [SerializeField] float iFrameSpeed = 3;
+    [SerializeField] Color damageColor = new Color(0.4f, 0.4f, 0.4f, 1f);
 
     /* State variables */
     bool isGrounded = true;
     bool isMoving = false;
     float invincibilityCounter = -1;
+    Color defaultColor = new Color(1f, 1f, 1f, 1f);
 
     /* Cached components */
     Animator myAnimator;
     SpriteRenderer mySprite;
     Rigidbody2D myBody;
     Collider2D myCollider2D;
+
+    // debugging
+    public Color myColor;
 
     /* Use this for initialization */
     void Start ()
@@ -52,7 +58,7 @@ public class PlayerController : MonoBehaviour
         // update invincibilityCounter
         if (invincibilityCounter >= 0)
         {
-            invincibilityCounter -= Time.deltaTime;
+            invincibilityCounter -= 1 * Time.deltaTime;
         }
 
         // check if player has died
@@ -60,6 +66,7 @@ public class PlayerController : MonoBehaviour
         {
             Die();
         }
+        myColor = mySprite.color;
     }
 
     /* Implement collision handling */
@@ -75,7 +82,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
 
-        // check if player is hit by an enemy and not invincible
+        // check if player is hit by any damage and not invincible
         if (myCollider2D.IsTouchingLayers(LayerMask.GetMask("Player Damage")) && invincibilityCounter < 0)
         {
             health -= 50;
@@ -133,17 +140,17 @@ public class PlayerController : MonoBehaviour
         {
             if (isMoving)
             {
-            myAnimator.Play("Hero-Run");
+                myAnimator.Play("Run");
             }
             else
             {
-            myAnimator.Play("Hero-Idle");
+                myAnimator.Play("Idle");
             }
         }
         // animation in the air
         else
         {
-            myAnimator.Play("Hero-Jump");
+            myAnimator.Play("Jump");
         }
     }
 
