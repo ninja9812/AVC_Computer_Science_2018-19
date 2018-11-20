@@ -159,4 +159,25 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    //makes the moving platform the parent so the player isnt left behind while the platform moves
+    void OnCollisionEnter2D(Collision2D other)
+    {
+
+        if (other.gameObject.tag == "MovingPlatform")
+        {
+            transform.parent = other.transform;
+        }
+
+    }
+
+    //exits the moving platform making the player independent again
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "MovingPlatform")
+        {
+            transform.parent = null;
+        }
+    }
+
 }
